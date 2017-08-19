@@ -57,7 +57,9 @@ footer, i {
   color: white;
 }
 
-#start, #stop {
+#start,
+#stop,
+#loop {
   top: 5px;
 }
 
@@ -67,6 +69,10 @@ footer, i {
 
 #stop {
   left: 30px;
+}
+
+#loop {
+  left: 55px;
 }
 
 footer {
@@ -83,6 +89,8 @@ h1,h2 {
   font-family: 'Stan', sans-serif;
   text-shadow: 0px 2px 2px black;
   color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {

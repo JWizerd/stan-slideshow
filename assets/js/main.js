@@ -1,6 +1,4 @@
 var timer    = null, 
-    interval = 1000,
-    value    = 0,
     count    = 1
     audio    = document.getElementById("audio")
 
@@ -31,7 +29,7 @@ function slideInterval(slideCount) {
   console.log(count)
   if (count == slideCount) {
     count = 1
-    $('h1').html('"Gone Fishin"')
+    $('h1').before('<h2>"Gone Fishin"</h2>')
     clearInterval(timer);
     timer = null
   } else {
@@ -43,6 +41,34 @@ function slideInterval(slideCount) {
   }
 }
 
+function loopInterval(slideCount) {
+  console.log(count)
+  if (count == slideCount) {
+    count = 1
+  } else {
+    $('.slide').fadeOut('slow', function() {
+      $('.slide').attr('src', 'assets/img/' + count + '.jpg')
+    })
+    $('.slide').fadeIn('slow')
+    count++
+  }
+}
+
+function slideshowLoop(slideCount, slideTransitions) {
+  console.log('looping')
+  $("#loop").click(function() {
+    // if timer is set break
+    if (timer !== null) {
+      return
+    } else {
+      timer = setInterval(function() {
+        loopInterval(slideCount)
+      }, slideTransitions)  
+    }
+  });
+}
+
 $(document).ready(function(){
-  backgroundSlideShow(5, 5000)
+  backgroundSlideShow(46, 7000)
+  slideshowLoop(46, 11000)
 })

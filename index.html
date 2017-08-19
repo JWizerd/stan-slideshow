@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <i class="fa fa-play" id="start"></i>
+  <i class="fa fa-music" id="start"></i>
   <i class="fa fa-times" id="stop"></i>
+  <i class="fa fa-play" id="loop"></i>
   <img src="assets/img/bg-grandparent-home.jpg" alt="" class="bg-img">
   <div class="bg-overlay"></div>
 
@@ -23,7 +24,25 @@
   <footer>
     <h1>Stan Hawkins: 1945 - 1972</h1>
   </footer>
-  <audio id="audio" src="assets/audio/Hollyn--In-Awe.mp3" type="audio/mpeg"></audio>
+  <!--  
+
+  1st song: 181 seconds
+  2nd song: 311 seconds
+
+  Total: 509 seconds of audio
+  
+  Both Songs: 
+  * numbers are rounded 
+
+  181 / 11 = 47 photos
+
+  2nd Song: 311 / 7 = 45 photos
+
+  -->
+  <audio id="audio" type="audio/mpeg">
+    <source type="audio/mp3" src="assets/audio/Ill-See-You-Again--Westlife.mp3">
+    Sorry, your browser does not support HTML5 audio.
+  </audio>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
