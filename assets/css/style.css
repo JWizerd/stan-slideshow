@@ -57,9 +57,16 @@ footer, i {
   color: white;
 }
 
-i {
+#start, #stop {
   top: 5px;
+}
+
+#start {
   left: 5px;
+}
+
+#stop {
+  left: 30px;
 }
 
 footer {
@@ -70,11 +77,14 @@ i {
   left: 10px;
 }
 
-h1 {
+h1,h2 {
   text-align: center;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Stan', sans-serif;
-  font-size: 50px;
   text-shadow: 0px 2px 2px black;
+  color: white;
+}
+
+h1 {
+  font-size: 50px;
 }
