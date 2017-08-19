@@ -81,6 +81,12 @@ footer {
 
 i {
   left: 10px;
+  transition: ease all .2s;
+}
+
+i:hover {
+  color: #333;
+  cursor: pointer;
 }
 
 h1,h2 {
@@ -99,5 +105,5 @@ h1 {
 
 h2 {
   position: relative;
-  top: -60px;
+  top: -100px;
 }
