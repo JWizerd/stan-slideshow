@@ -69,6 +69,6 @@ function slideshowLoop(slideCount, slideTransitions) {
 }
 
 $(document).ready(function(){
-  backgroundSlideShow(46, 7000)
+  backgroundSlideShow(46, 6890)
   slideshowLoop(46, 11000)
 })
