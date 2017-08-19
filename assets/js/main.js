@@ -1,26 +1,3 @@
-// var start;
-// function backgroundSlideShow(wallpaperCount, slideTransitions) {
-//   var count = 1,
-//       timer = null,
-
-//   $('').on('click', function(){
-//     setInterval(function(wallpaperCount, slideTransitions){
-//       if (count > (wallpaperCount - 1)) {
-//         count = 1
-//       } else {
-//         $('.slide').fadeOut('slow', function() {
-//           $('.slide').attr('src', 'assets/img/' + count + '.jpg')
-//         })
-//         $('.slide').fadeIn('slow')
-//         count++
-//         console.log(count)
-//       }
-//     }, slideTransitions) 
-//   });
-// }
-
-// https://stackoverflow.com/questions/41756542/how-to-toggle-setinterval-on-click-javascript
-
 var timer    = null, 
     interval = 1000,
     value    = 0,
@@ -67,5 +44,5 @@ function slideInterval(slideCount) {
 }
 
 $(document).ready(function(){
-  backgroundSlideShow(5, 8000)
+  backgroundSlideShow(5, 5000)
 })
