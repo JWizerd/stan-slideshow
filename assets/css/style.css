@@ -13,7 +13,10 @@ body, html {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  display: flex;
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
   align-items: center;
   justify-content: center;
 }
@@ -47,6 +50,7 @@ body, html {
 
 .item img {
   max-height: 600px;
+  max-width: 100%;
   box-shadow: 0px 2px 11px black;
   border: 5px solid white;
 }
@@ -105,5 +109,5 @@ h1 {
 
 h2 {
   position: relative;
-  top: -100px;
+  top: -60px;
 }
