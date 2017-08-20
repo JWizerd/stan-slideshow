@@ -35,7 +35,7 @@ body, html {
 }
 
 .bg-overlay {
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.1);
 }
 
 .item, i {
@@ -95,6 +95,7 @@ i:hover {
 
 h1,h2 {
   text-align: center;
+  width: 100%;
   text-transform: uppercase;
   font-family: 'Stan', sans-serif;
   text-shadow: 0px 2px 2px black;
@@ -109,5 +110,6 @@ h1 {
 
 h2 {
   position: relative;
-  top: -60px;
+  top: -15px;
+  font-size: 40px;
 }

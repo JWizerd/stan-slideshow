@@ -2,10 +2,41 @@ var timer    = null,
     count    = 1
     audio    = document.getElementById("audio")
 
-function backgroundSlideShow(slideCount, slideTransitions) {
+function slideAnimation() {
+  $('.slide').fadeOut('slow', function() {
+    $('.slide').attr('src', 'assets/img/' + count + '.jpg')
+  })
+  $('.slide').fadeIn('slow')
+}
 
+function slideInterval(slideCount) {
   console.log(count)
+  if (count == slideCount) {
+    count = 1
+    $('h1').html('Gone Fishing...')
+    clearInterval(timer);
+    timer = null
+    setTimeout(function() {
+      window.location.reload()
+    }, 10000)
+  } else {
+    slideAnimation(count)
+    count++
+  }
+}
+
+function loopInterval(slideCount) {
+  if (count == slideCount) {
+    count = 1
+  } else {
+    slideAnimation(count)
+    count++
+  }
+}
+
+function backgroundSlideShow(slideCount, slideTransitions) {
   $("#start").click(function() {
+    console.log(count)
     console.log('firing')
     audio.play()
     // if timer is set break
@@ -25,38 +56,9 @@ function backgroundSlideShow(slideCount, slideTransitions) {
   });
 }
 
-function slideInterval(slideCount) {
-  console.log(count)
-  if (count == slideCount) {
-    count = 1
-    $('h1').before('<h2>"Gone Fishin"</h2>')
-    clearInterval(timer);
-    timer = null
-  } else {
-    $('.slide').fadeOut('slow', function() {
-      $('.slide').attr('src', 'assets/img/' + count + '.jpg')
-    })
-    $('.slide').fadeIn('slow')
-    count++
-  }
-}
-
-function loopInterval(slideCount) {
-  console.log(count)
-  if (count == slideCount) {
-    count = 1
-  } else {
-    $('.slide').fadeOut('slow', function() {
-      $('.slide').attr('src', 'assets/img/' + count + '.jpg')
-    })
-    $('.slide').fadeIn('slow')
-    count++
-  }
-}
-
 function slideshowLoop(slideCount, slideTransitions) {
-  console.log('looping')
   $("#loop").click(function() {
+    console.log('looping')
     // if timer is set break
     if (timer !== null) {
       return
