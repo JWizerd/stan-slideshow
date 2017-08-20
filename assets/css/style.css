@@ -50,33 +50,28 @@ body, html {
 
 .item img {
   max-height: 600px;
-  max-width: 100%;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
   box-shadow: 0px 2px 11px black;
   border: 5px solid white;
 }
 
-footer, i {
+footer, header {
   position: fixed;
   width: 100%;
   color: white;
+  z-index: 2;
 }
 
-#start,
+header {
+  top: 0;
+  padding: 20px;
+}
+
 #stop,
 #loop {
-  top: 5px;
-}
-
-#start {
-  left: 5px;
-}
-
-#stop {
-  left: 30px;
-}
-
-#loop {
-  left: 55px;
+  padding-left: 25px;
 }
 
 footer {
@@ -84,7 +79,6 @@ footer {
 }
 
 i {
-  left: 10px;
   transition: ease all .2s;
 }
 
@@ -115,13 +109,14 @@ h2 {
 }
 
 @media all and (max-width:767px) {
-  h1, h2 {
-    display: none;
+
+  h1 {
+    font-size: 25px;
   }
   
   #start, #stop, #loop {
     top: 5px;
-    font-size: 30px;
+    left: 0;
   }
   
   #loop {
@@ -131,4 +126,16 @@ h2 {
   #stop {
     left: 60px;
   }
+
+  header {
+    text-align: center;
+  }
+
+
 }
+
+@media all and (max-width:480px) {
+  h1 {
+    font-size: 20px;
+  }
+} 
