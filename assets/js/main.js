@@ -36,8 +36,7 @@ function loopInterval(slideCount) {
 
 function backgroundSlideShow(slideCount, slideTransitions) {
   $("#start").click(function() {
-    console.log(count)
-    console.log('firing')
+    console.log('slideshow started')
     audio.play()
     // if timer is set break
     if (timer !== null) {
