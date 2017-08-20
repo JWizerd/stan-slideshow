@@ -113,3 +113,22 @@ h2 {
   top: -15px;
   font-size: 40px;
 }
+
+@media all and (max-width:767px) {
+  h1, h2 {
+    display: none;
+  }
+  
+  #start, #stop, #loop {
+    top: 5px;
+    font-size: 30px;
+  }
+  
+  #loop {
+    left: 117px;
+  }
+  
+  #stop {
+    left: 60px;
+  }
+}
